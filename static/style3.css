@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+}
+body{
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background-image: url("profile_new.jpg");
+  background-size: cover;
+   background-repeat:no-repeat ;
+   
+
+  
+
+}
+
+.container{
+    font-family: "Roboto", sans-serif;
+    outline: 1px solid rgb(85, 85, 83);
+    background-color: rgba(255,255,255,0.7);
+    backdrop-filter: blur(10px);
+    margin:auto;
+    padding-bottom: 40px;
+    padding-right: 18px;
+    height: 700px;
+    box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2), 0 12px 40px 0 rgba(0,0,0,0.19);
+}
+
+
+/* Google Fonts - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+  
+
+  
+form {
+    width: 450px;
+    margin-left: 20px;
+    
+  }
+  
+form label {
+    display: flex;
+    margin-top: 12px;
+    font-size: 15px;
+    
+  }
+  
+form input {
+    width: 100%;
+    padding: 7px;
+    border: none;
+    border: 1px solid gray;
+    border-radius: 6px;
+    outline-color: rgb(92, 193, 196);
+  }
+
+  /* .bnn{
+    background-color: rgb(22, 22, 71);
+    color:white;
+    margin-top:18px;
+    width:80px;
+    border-radius:5px;
+    margin-left: 170px;
+border-color: white;
+border-width:1px;
+height:35px;
+
+  }
+
+  .bnn:hover{
+    opacity:0.9;
+    
+    
+  } */
+  .tom{
+    width: 320px;
+    height: 35px;
+    margin-top: 20px;
+    border: none;
+    background-color: #49c1a2;
+    color: white;
+    font-size: 18px;
+  }
+.tom:hover{
+  cursor: pointer;
+  background-color: #358f78;
+}

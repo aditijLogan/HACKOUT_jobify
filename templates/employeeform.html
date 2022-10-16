@@ -1,0 +1,104 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <link rel="stylesheet" href="{% static 'style4.css' %}">
+     
+
+
+    
+</head>
+<body>
+    <div class="container">
+        
+
+        <form action="form" method="post">
+
+                
+                    <h1 class="title"> Personal Details</h1>
+
+                    <div class="fields">
+                        <div class="input-field">
+                            <label>Full Name</label>
+                            <input type="text" placeholder="Enter your name" name="name" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Age</label>
+                            <input type="number" placeholder="Enter your age" name="age" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Email</label>
+                            <input type="text" placeholder="Enter your email" name="email" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Mobile Number</label>
+                            <input type="number" placeholder="Enter mobile number" name="phone" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Gender</label>
+                            <select name="gender" required>
+                                <option disabled selected>Select gender</option>
+                                <option>Male</option>
+                                <option>Female</option>
+                                <option>Others</option>
+                            </select>
+                         </div>
+                        
+                         <div class="input-field">
+                            <label>Qualification</label>
+                            <select name="education" required>
+                                <option disabled selected>Select your Qualification</option>
+                                <option>Matriculate</option>
+                                <option>Intermatriculate</option>
+                                <option>Undergraduate</option>
+                                <option>Postgraduate</option>
+                            </select>
+                         </div>
+
+                        <div class="input-field">
+                            <label>Preferred Jobs</label>
+                            <select name="job" required>
+                                <option disabled selected>Select Jobs</option>
+                                <option>Salesman</option>
+                                <option>Accountant</option>
+                                <option>Delivery Person</option>
+                                <option>Receptionist</option>
+                                <option>House Help</option>
+                                <option>Office Boy</option>
+                                <option>Driver</option>
+                                <option>Technician</option>
+                                <option>Makeup Artist</option>
+                                <option>Teacher</option>
+                            </select>
+                        </div>
+                    
+            
+                        <div class="input-field">
+                            <label>Aadhaar Number</label>
+                            <input type="text" placeholder="Enter your aadhar number" name="aadhar" required>
+                        </div>
+
+                        <div class="input-field">
+                            <label>Address</label>
+                            <input type="text" placeholder="Enter your address" name="address" required>
+                        </div> 
+                </div>
+                <button type="submit" class="tom">Submit</button>
+                 
+            </div>
+
+        </form>
+        
+
+    
+</body>
+</html>

@@ -1,0 +1,444 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JOBIFY</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <style>
+      *{
+      padding:0;
+      margin: 0;
+      text-decoration: none;
+      list-style: none;
+      box-sizing: border-box;
+    }
+    body{
+      font-family: montserrat;
+      /* overflow-x: hidden; */
+    }
+    nav{
+      background: #010c41;
+      height: 80px;
+      width: 100%;
+      border-radius: 0px;
+  margin-bottom: 0;
+  margin-top: 0;
+  position:fixed;
+  
+  
+      
+    }
+    label.logo{
+      color:white;
+      font-size: 35px;
+      line-height: 80px;
+      padding: 0 100px;
+      font-weight: bold;
+    }
+    nav ul{
+      float: right;
+      margin-right: 20px;
+    }
+    nav ul li{
+      display: inline-block;
+      line-height: 80px;
+      margin: 0 5px;
+    }
+    nav ul li a{
+      color: #fff;
+      font-size: 17px;
+      padding: 7px 13px;
+      border-radius: 3px;
+      text-transform: uppercase;
+      font-family: 'Baloo Bhai 2', cursive;
+      
+    }
+    a.active,a:hover{
+      background: #fff;
+      transform:scale(1.2);
+      color: #022f69;
+      
+    }
+    .checkbtn{
+      font-size: 30px;
+      color: #fff;
+      float: right;
+      line-height: 80px;
+      margin-right: 40px;
+      cursor: pointer;
+      display: none;
+    }
+    #check{
+      display: none;
+    }
+    @media (max-width: 968px){
+      label.logo{
+        font-size: 30px;
+        padding-left: 50px;
+      }
+      nav ul li a{
+        font-size: 16px;
+      }
+    }
+    @media (max-width: 875px){
+      .checkbtn{
+        display: block;
+      }
+      nav ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #27282c;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+      }
+      nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+      }
+      nav ul li a{
+        font-size: 20px;
+      }
+      a:hover, a.active{
+        background: none;
+        color: #0082e6;
+        opacity:20;
+        transform:scale(1.2);
+      }
+      #check:checked ~ ul{
+        left: 0;
+      }
+    }
+     
+  .home{
+      display:flex;
+      flex-direction:column;
+      padding:3px 200px;
+  justify-content:center;
+  align-items: center;
+  }
+  .home::before{
+      content:"";
+  background: url("{% static '15.jpg'%}")no-repeat center center/cover;
+  position:absolute;
+  height:150%;
+  width:100%;
+  z-index:-1;
+  opacity:0.8;
+      
+  }
+  .home h1{
+      font-size:4rem;
+      color:white;
+      text-align: center;
+      font-family: 'Baloo Bhai 2', cursive;
+      margin-top:130px;
+  }
+  .home p{
+      color:rgb(64, 64, 97);
+      text-align: center;
+      font-size: 1.5rem;
+      padding:0px;
+      margin:0px;
+      font-family: 'Baloo Bhai 2', cursive;
+  }
+  .h.primary{
+     
+      padding:14px;
+  }
+  .btn{
+      margin: 25px;
+      padding:9px;
+      border:2px solid white;
+      background-color: #010c41;
+      opacity:0.8;
+      color:white;
+      width: 150px;
+      font-size:20px;
+      border-radius: 15px;
+      
+      
+  }
+  .btn:hover{
+  cursor:pointer;
+  opacity:0.9;
+  transform:scale(1.2);
+  }
+  /* .services{
+      margin-top:149px;
+      margin-left:0px;
+  
+      display:flex;
+  }
+  .services .box{
+  border:2px solid red;
+  }
+  .h-primary1{
+  padding:12px;
+  }
+  .h-secondary{
+      padding:12px;
+  } */
+  
+  .p1{
+      margin-top:200px;
+      background-color:white;
+  }
+  .photo1{
+      padding:5px;
+      margin-top:5px;
+
+  }
+  .photo2{
+    padding:5px;
+      margin-top:5px;
+      margin-left:20px;
+
+  }
+  /* .home2::before{
+      content:"";
+  background: url('16.jpg')no-repeat center center/cover;
+  position:absolute;
+  height:70%;
+  width:100%;
+  z-index:-1;
+  
+      
+  }
+  .home2{
+      display:flex;
+      
+      flex-direction:column;
+      padding:400px 450px;
+  justify-content:center;
+  align-items: center;
+  opacity:0.8;
+  } */
+  .btn2{
+    margin: 25px;
+    display:inline-block;
+      padding:9px;
+      border:2px solid white;
+      background-color: #010a38;
+      
+      color:white;
+      width: 150px;
+      font-size:20px;
+      border-radius: 15px;
+  }
+  .btn2:hover{
+  cursor:pointer;
+  opacity:0.7;
+  
+  }
+  .end{
+    display: flex;
+    flex-direction: row;
+  }
+  .btn3{
+    margin: 25px;
+    display:inline block;
+      padding:9px;
+      border:2px solid white;
+      background-color: #010a38;
+      
+      color:white;
+      width: 150px;
+      font-size:20px;
+      border-radius: 15px;
+  }
+  .btn3:hover{
+  cursor:pointer;
+  opacity:0.7;
+  
+  }
+  .contact{
+    margin-top:40px;
+    margin-left:40px;
+    
+    height:150px;
+    width:100%;
+    background-color:white;
+  }
+  .last{
+    height:200px;
+    width:266px;
+    background-color:white;
+  }
+  .con{
+    margin-left:50px;
+    align-items: center;
+  }
+  .heading{
+    display:inline-block;
+    margin-left:60px;
+    margin-top:-20px;
+    margin-bottom: 25px;
+    margin-right:0px;
+    color:rgb(81, 80, 80);
+  }
+  .fb{
+    margin-left:15px;
+  }
+  .fb:hover{
+    filter:invert(20%);
+  }
+  .p2{
+    color:rgb(81, 80, 80);
+    margin-left:60px;
+    margin-top:15px;
+    margin-right:0px;
+    text-decoration: none;
+  }
+  .heading2{
+    display:inline-block;
+    margin-left:10px;
+    margin-top:-20px;
+    margin-bottom: 25px;
+    margin-right:0px;
+    color:rgb(81, 80, 80);
+  }
+  .p3{
+    color:rgb(81, 80, 80);
+    margin-left:10px;
+    margin-top:15px;
+    
+    margin-right:0px;
+    color:rgb(81, 80, 80);
+    text-decoration: none;
+  }
+  .heading3{
+    display:inline-block;
+    margin-left:80px;
+    margin-top:-20px;
+    margin-bottom: 25px;
+    margin-right:0px;
+    color:rgb(81, 80, 80);
+  }
+  .p4{
+    color:rgb(81, 80, 80);
+    margin-left:80px;
+    margin-top:15px;
+    
+    margin-right:0px;
+    color:rgb(81, 80, 80);
+    text-decoration: none;
+  }
+  .endline{
+    text-decoration:none;
+    color:black;
+    margin-bottom:150px;
+    margin-left:60px;
+    margin-bottom:20px;
+    
+  }
+  </style>
+</head>
+
+<body>   
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+          <i class="fas fa-bars"></i>
+        </label>
+        <label class="logo">JOBiFy </label>
+        <ul>
+          <li><a class="active" href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Feedback</a></li>
+        
+    
+    
+        </ul>
+      </nav>
+    
+    <section class="home">
+        <h1 class="h.primary"> JOBiFy </h1>
+        <p>Getting a job is just one click away now, all your job-related problems resolved. </p>
+        <p>Instant match with your employer and employee according to their needs and skills.</p>
+   <button class="btn" onclick="window.location.href='/signup';"> Register Now</button>
+    </section>
+     
+    <!-- <section class="services">
+        <h1 class="h-primary1">Our Services</h1>
+        <div class="box">
+            <img src="1.jpg" width="250px" height="125px">
+            <h2 class="h-secondary">food odering</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum blanditiis nulla sit tempore dolore incidunt.</p>
+        </div>
+    </section> -->
+<!-- <section class="home2"> -->
+  <!-- <div class="2buttons">
+    <button class="btn2">
+      Job Seeker
+  </button>
+  <button class="btn3">
+    Employer
+  </button>
+  </div> -->
+  
+<!-- </section> -->
+    <div class="p1">
+        <img src="{% static '14.jpg' %}" class="photo2" width="300.9px" height="200.58px">
+        <!-- <img src="{% static '17.jpg' %}" class="photo1" width="300.9px" height="200.58px"> -->
+        <img src="{% static '12.jpg' %}" class="photo1" width="300.9px" height="200.58px">
+        <img src="{% static '19.jpg' %}" class="photo1" width="300.9px" height="200.58px">
+        <img src="{% static '18.jpg' %}" class="photo1" width="297px" height="200.58px">
+        
+    </div>
+    <div class="contact">
+<!-- <img src="xy.png" class="con" width="200px" height="125px"> -->
+<a href="https://www.facebook.com" target="popup"><img src="{% static 'fb.png'%}" class="fb" width="60px" height="60px">
+  <a href="https://www.twitter.com" target="popup"><img src="{% static 'tw.png'%}" class="fb" width="60px" height="60px">
+    <a href="https://www.instagram.com" target="popup"><img src="{% static 'in.png'%}" class="fb" width="60px" height="60px">
+
+    </div>
+    <div class="end">
+    <div class="last">
+      <h2 class="heading">
+        ABOUT US             
+      </h2>
+        <h4 class="p2">
+Our Company
+      </h4>
+
+      <h4 class="p2">
+        Our Heritage
+              </h4>
+            </div>
+              <div class="last2">
+              <h2 class="heading2">
+              CUSTOMER SERVICE
+              </h2>
+              <h4 class="p3">
+                Frequently Asked Questions
+              </h4>
+            
+    </div>
+    <div class="last3">
+      <h2 class="heading3">
+      QUICK LINKS
+      </h2>
+      <h4 class="p4">
+        Support
+      </h4>
+    
+</div>
+  </div>
+  <div class="endline">
+    Web Accessibilty | Privacy Policy | Terms of Use | Site Map | Contact Us
+  </div>
+
+</body>
+
+</html>

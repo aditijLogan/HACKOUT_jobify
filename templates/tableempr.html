@@ -1,0 +1,226 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'style5.css' %}" />
+
+
+    <style>
+        *{
+        padding:0;
+        margin: 0;
+        text-decoration: none;
+        list-style: none;
+        box-sizing: border-box;
+      }
+      body{
+        font-family: montserrat;
+        /* overflow-x: hidden; */
+      }
+      nav{
+        background: #010c41;
+        height: 80px;
+        width: 100%;
+        border-radius: 0px;
+    margin-bottom: 0;
+    margin-top: 0;
+    position:fixed;
+    
+    
+        
+      }
+      label.logo{
+        color:white;
+        font-size: 35px;
+        line-height: 80px;
+        padding: 0 100px;
+        font-weight: bold;
+      }
+      nav ul{
+        float: right;
+        margin-right: 20px;
+      }
+      nav ul li{
+        display: inline-block;
+        line-height: 80px;
+        margin: 0 5px;
+      }
+      nav ul li a{
+        color: #fff;
+        font-size: 17px;
+        padding: 7px 13px;
+        border-radius: 3px;
+        text-transform: uppercase;
+        
+      }
+      a.active,a:hover{
+        background: #fff;
+        transform:scale(1.2);
+        color: #022f69;
+        
+      }
+      .checkbtn{
+        font-size: 30px;
+        color: #fff;
+        float: right;
+        line-height: 80px;
+        margin-right: 40px;
+        cursor: pointer;
+        display: none;
+      }
+      #check{
+        display: none;
+      }
+      @media (max-width: 968px){
+        label.logo{
+          font-size: 30px;
+          padding-left: 50px;
+        }
+        nav ul li a{
+          font-size: 16px;
+        }
+      }
+      @media (max-width: 875px){
+        .checkbtn{
+          display: block;
+        }
+        nav ul{
+          position: fixed;
+          width: 100%;
+          height: 100vh;
+          background: #27282c;
+          top: 80px;
+          left: -100%;
+          text-align: center;
+          transition: all .5s;
+        }
+        nav ul li{
+          display: block;
+          margin: 50px 0;
+          line-height: 30px;
+        }
+        nav ul li a{
+          font-size: 20px;
+        }
+        a:hover, a.active{
+          background: none;
+          color: #0082e6;
+          opacity:20;
+          transform:scale(1.2);
+        }
+        #check:checked ~ ul{
+          left: 0;
+        }
+      }
+  
+</style>  
+</head>
+<body>
+
+
+
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+          <i class="fas fa-bars"></i>
+        </label>
+        <label class="logo">JOBiFy </label>
+        <ul>
+          <li><a class="active" href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Feedback</a></li>
+          <li><a href="#">Logout</a></li>
+    
+    
+    
+        </ul>
+      </nav>
+    
+
+    <form>
+        
+        <div class="input-field">
+        <div class="input-f">
+            <label>Preferred Qualification</label>
+            <select required class="dropdown">
+                <option disabled selected>Select Qualification</option>
+                <option>Matriculate</option>
+                <option>Intermatriculate</option>
+                <option>Undergraduate</option>
+                <option>Postgraduate</option>
+            </select>
+         </div>
+
+         <div class="input-f">
+            <label>Preferred Gender</label>
+            <select required class="dropdown">
+                <option disabled selected>Select gender</option>
+                <option>Male</option>
+                <option>Female</option>
+                <option>Others</option>
+            </select>
+        </div>
+         
+
+            <div class="input-f">
+            <label>Preffered Jobs</label>
+            <select required class="dropdown">
+                <option disabled selected>Select Jobs</option>
+                <option>Salesman</option>
+                <option>Accountant</option>
+                <option>Delivery Person</option>
+                <option>Receptionist</option>
+                <option>House Help</option>
+                <option>Office Boy</option>
+                <option>Driver</option>
+                <option>Technician</option>
+                <option>Beautician</option>
+                <option>Teacher</option>
+            </select>
+        </div>
+    
+    </div>
+        
+</form>
+
+
+    <div class="container">
+      
+        <div class="cards2">
+            <div class="card">
+      
+             <p class="para"><b class="b">Name:</b></p>
+             <p class="para"><b class="b">Age:</b></p>
+             <p class="para"><b class="b">Address:</b></p>
+             <p class="para"><b class="b">E-mail:</b></p>
+             <p class="para"><b class="b">Mobile Number:</b></p>
+
+      
+            </div>
+      
+      
+            <div class="card">
+                <p class="para"><b class="b">Name:</b></p>
+                <p class="para"><b class="b">Age:</b></p>
+                <p class="para"><b class="b">Address:</b></p>
+                <p class="para"><b class="b">E-mail:</b></p>
+                <p class="para"><b class="b">Mobile Number:</b></p>
+   
+            </div>
+          </div>
+      
+     
+        
+    </div>
+
+
+        
+</body>
+</html>
+
